@@ -8,6 +8,7 @@
 - React Router 4
 - Redux
 - Redux Saga
+- Material-UI
 
 ### Installation
 
