@@ -10,6 +10,7 @@ import App from './scripts/App';
 import rootReducer from './scripts/reducers';
 import './index.css';
 import rootSaga from './scripts/sagas';
+import Theme from './Theme';
 
 const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -27,6 +28,8 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <Theme>
+        <App />
+      </Theme>
     </BrowserRouter>
   </Provider>, document.getElementById('app'));
